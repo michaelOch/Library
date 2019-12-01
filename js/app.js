@@ -80,7 +80,7 @@ function render(book) {
 function removeBook(e) {
     if(e.target.parentElement.classList.contains('float-right')) {
         const bookInd = e.target.parentElement.parentElement.getAttribute('data-attribute');
-        if(confirm('Are you sure you want to delete task?')) {
+        if(confirm('Are you sure you want to delete book?')) {
             e.target.parentElement.parentElement.remove();
             if(myLibrary.length == 1) {
                 myLibrary = [];
