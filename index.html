@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Object Constructors</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row my-2">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header text-center">
+                        <h4>LIBRARY</h4>
+                    </div>
+                    <div class="card-body">
+                        <!--  Button to trigger modal form  -->
+                        <button type="button" class="btn btn-sm btn-dark" data-toggle="modal" data-target="#formModal">
+                            Add New Book
+                        </button>
+                        <hr>
+                        <h2>Books</h2>
+
+                        <!--  Modal  -->
+                        <div class="modal fade" id="formModal" role="dialog" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">New Book</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form action="">
+                                            <div class="form-group">
+                                                <label for="">Author:</label>
+                                                <input type="text" class="form-control form-control-sm" id="author">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="">Title:</label>
+                                                <input type="text" class="form-control form-control-sm" id="title">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="">Number of Pages:</label>
+                                                <input type="text" class="form-control form-control-sm" id="pages">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="">Number of Pages:</label>
+                                                <select class="form-control form-control-sm" id="isRead">
+                                                    <option value="true">Read</option>
+                                                    <option value="false">Not Read</option>
+                                                </select>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-sm btn-secondary" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-sm btn-primary" id="addBook" data-dismiss="modal">Add Book</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <lu class="list-group"></lu>
+                    </div>
+
+                    <!--  Books  -->
+                    <!-- <div class="jumbotron mx-3 py-3">
+                        <span class="text-danger float-right">&times;</span>
+                        <h4>The Hobbit <sup><span class="badge badge-pill badge-primary">295</span></sup></h4>
+                        <p class="lead">By J.R.R. Tolkien</p>
+                        <button type="button" class="btn btn-sm btn-primary">Read</button>
+                    </div> -->
+                    <div class="card-footer text-center text-muted">
+                        Copyright &copy; 2019 | Library
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
