@@ -120,20 +120,23 @@ document.querySelector('#addBook').addEventListener('click', function() {
         pages = document.querySelector('#pages'),
         readOption = document.querySelector('#isRead');
 
-        //  Instantiate book
-        const book = new Book(title.value, author.value, pages.value, readOption.value === 'true' ? true : false);
+        if(title.value !== '' && author.value !== '' && pages.value !== '' && readOption.value !== '') {
+            //  Instantiate book
+            const book = new Book(title.value, author.value, pages.value, readOption.value === 'true' ? true : false);
+            //  Instantiate UI
+            const ui = new UI();
 
-        //  Instantiate UI
-        const ui = new UI();
+            //  Add book to list
+            ui.addBookToList(book);
 
-        //  Add book to list
-        ui.addBookToList(book);
+            //  Add Book to LS
+            Store.addBook(book);
 
-        //  Add Book to LS
-        Store.addBook(book);
-
-        //  clear input fields
-        ui.clearField();
+            //  clear input fields
+            ui.clearField();
+        } else {
+            alert('Please input all fields');
+        }
 });
 
 document.querySelector('.list-group').addEventListener('click', function(e) {
